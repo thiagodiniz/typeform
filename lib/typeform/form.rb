@@ -1,4 +1,4 @@
-require 'typeform'
+require_relative '../typeform'
 require 'json'
 
 module Typeform

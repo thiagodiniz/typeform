@@ -2,8 +2,8 @@ require "httparty"
 require "hashie"
 Hash.send :include, Hashie::Extensions
 
-require "typeform/version"
-require "typeform/form"
+require_relative "typeform/version"
+require_relative "typeform/form"
 
 module Typeform
   class << self
@@ -37,9 +37,9 @@ module Typeform
   class Typeform
     include HTTParty
 
-    @@base_uri = "https://api.typeform.com/v0/"
+    @@base_uri = "https://api.typeform.com/v1/"
     @@api_key = ""
-    headers({ 
+    headers({
       'User-Agent' => "typeform-rest-#{VERSION}",
       'Content-Type' => 'application/json; charset=utf-8',
       'Accept-Encoding' => 'gzip, deflate'

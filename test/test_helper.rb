@@ -1,4 +1,4 @@
-require './lib/typeform'
+require_relative '../lib/typeform'
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'
